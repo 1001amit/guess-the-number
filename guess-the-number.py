@@ -13,6 +13,16 @@ while True:
     try:
         user_guess= int(user_guess)
     except ValueError:
-        print("enter a valid no.")
+        print("Please Enter a valid number")
         continue
-    
+
+    if user_guess < number_to_guess:
+            print("Too low! Try again.")
+    elif user_guess > number_to_guess:
+        print("Too high! Try again.")
+    else:
+        print("Congratulations! You guessed the number correct.")
+        
+        break
+
+guess_the_number()
